@@ -9,6 +9,8 @@
 ********/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Poppins:wght@300&display=swap');
+
 
 :root{
   --basecolor: #0084E3;
@@ -26,7 +28,7 @@ html{
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 , p{
   color: var(--default);
   font-family: 'Poppins', sans-serif;
 }
@@ -36,6 +38,12 @@ input, select{
   border-radius: 3px;
   outline: none;
 }  
+
+ul, li, ol {
+  list-style-type: none;
+  color: var(--default);
+  font-family: 'Poppins', sans-serif;
+}
 
 #app {
   font-family: 'Poppins', sans-serif;  
