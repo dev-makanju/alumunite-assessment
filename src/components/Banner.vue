@@ -226,14 +226,13 @@ export default{
    }
 
    .mobile-active{
+      max-height: 0;
       overflow: hidden;
-      display: none;
-      transition: max-height .2s ease-out ;
+      transition: max-height .5s ease ;
    }
 
    .mobile-active.open{
-      display: block;
-      transition: 100% .2s ease-out ;
+      max-height: 800px;
    }
    /********
    ***RESPONSIVE DESIGN FOR BANNER SECTION 
