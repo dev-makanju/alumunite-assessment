@@ -6,13 +6,14 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown} from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import vSelect from 'vue-select'
 
 
-library.add(faPhone, faArrowLeft, faTimes, faCheck, faGraduationCap , faPlus)
+library.add(faPhone, faArrowLeft, faTimes, faCheck, faGraduationCap , faPlus , faAngleDown)
 
 createApp(App)
    .use(router)

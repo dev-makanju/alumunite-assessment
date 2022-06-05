@@ -4,13 +4,15 @@
             <h1>School Information</h1>
             <div class="form-control select">
                <label>Select a school you graduated from</label>
-               <select name="" id="">
-                  <option value="">Faith Academy</option>
-                  <option value="">Academic Faith</option>
-                  <option value="">United World school</option>
-               </select>
+               <CustomSelect
+                  :options="options"
+               />
             </div>
-            <span class="form-link">Can't find your school here? <router-link class="form-nav-link" to="/">Add your school to this list</router-link></span>
+            <span class="form-link">Can't find your school here? 
+               <router-link class="form-nav-link" to="/">
+                  Add your school to this list
+               </router-link>
+            </span>
             <div class="form-control radio-button">
                <input type="radio"><span>Still schooling here presently </span>
             </div>
@@ -21,11 +23,9 @@
             <hr>  
             <div class="form-control select">
                <label>Select a school you graduated from</label>
-               <select name="" id="">
-                  <option value="">Faith Academy</option>
-                  <option value="">Academic Faith</option>
-                  <option value="">United World school</option>
-               </select>
+               <CustomSelect 
+                  :options="options"
+               />
             </div>
             <span class="form-link">Can't find your school here? <router-link class="form-nav-link" to="/">Add your school to this list</router-link></span>
             <div class="form-control radio-button">
@@ -55,10 +55,21 @@
 
 <script>
 
+import CustomSelect from '@/components/CustomComp/CustomSelect.vue'
+
 export default {
    name:'FormComponent',
    components:{
-
+      CustomSelect,
+   },
+   data(){
+      return{
+         options:[
+            'Faith Academy',
+            'Covenant University',
+            'Oxford University'
+         ]
+      }
    }
 }
 
@@ -122,7 +133,7 @@ form{
 
 form h1 {
    color: #000000;
-   float: left;
+   text-align: left;
 }
 
 .form-postal {
@@ -181,7 +192,7 @@ form h1 {
    color: #000000b4;
    display: block;
    padding: .4rem 0px;
-   float: left;
+   text-align: left;
    letter-spacing: .5px;
 }
 

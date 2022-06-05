@@ -11,8 +11,8 @@
          <router-link class="link" to="/">
             <span>
                <font-awesome-icon class="arror-l"  icon="arrow-left"></font-awesome-icon>
-               Back to Login  
-            </span> 
+                  Back to Login  
+               </span> 
          </router-link>
       </div>
       <div class="banner">
@@ -21,7 +21,9 @@
                <li>
                   <div class="progress-wrapper">
                      <div>1</div>
-                     <font-awesome-icon v-show="dataFilled" class="check" icon="check"></font-awesome-icon>
+                     <span  class="check">
+                        <font-awesome-icon class="check-icon"  icon="check"></font-awesome-icon>
+                     </span>
                   </div>
                   <h2>personal data</h2>
                </li>
@@ -63,7 +65,6 @@ export default{
 </script>
 
 <style lang="css" scoped>
-
    .link {
       text-decoration: none;
       font-weight: 600;
@@ -72,13 +73,22 @@ export default{
       font-size: 10px;
    }
 
+   .check-icon{
+      font-size: 14px;
+      font-weight: 600;
+   }
+
    .check {
       background: var(--checkbackground);
       border-radius: 50%;
       color: #fff;
-      width: 25px;
+      font-size: 10px;
+      width: 35px;
       padding: 5px;
-      height: 25px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       top: 0;
       left: 0;
       position: absolute;
@@ -139,7 +149,8 @@ export default{
       color: var(--basecolor);
       font-weight: bold;
       display: block;
-      padding: 5px;
+      padding: 8px;
+      font-family: 'Inria Sans', sans-serif;
    }
 
    .p-data{
@@ -147,7 +158,7 @@ export default{
    }
 
    .arror-l{
-      color: var(--basecolor );
+      color: var(--basecolor);
       margin-right: .5rem;
    }
 
@@ -156,12 +167,15 @@ export default{
    }
 
    .banner .text{
-      width: 45%;
+      width: 44%;
+      padding: 0px 2px;
       margin: 0px auto;
+      text-align: left;
    }
 
    .banner .text > p{
      font-size: 8px;
+     color: #00000090;
    }
 
    .banner-image-wrapper {
