@@ -63,6 +63,7 @@ export default{
 </script>
 
 <style lang="css" scoped>
+
    .link {
       text-decoration: none;
       font-weight: 600;

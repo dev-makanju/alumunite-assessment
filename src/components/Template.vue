@@ -33,6 +33,7 @@ export default {
    .template.form {
       background: #0084e30e;
       border-left: 2px solid rgba(180, 174, 174, 0.12);
+      overflow-y: auto;
    }
    
    
