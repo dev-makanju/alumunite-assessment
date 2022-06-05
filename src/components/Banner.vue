@@ -260,10 +260,6 @@ export default{
          padding-bottom: 3rem;
       }
 
-      .progress-wrapper{
-         width: 100%;
-      }
-
       .banner .text > p{
          font-size: 14px;
          color: #00000090;
