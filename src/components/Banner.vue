@@ -193,6 +193,7 @@ export default{
 
    .banner{
       margin-top: 1rem;
+      margin: auto ;
    }
 
    .banner .text{
@@ -243,7 +244,7 @@ export default{
       .template-nav,
       .banner-progress-wrapper ,
       .progress-content {
-         width: 94%;
+         width: 95%;
          transition: all .5s ease;
       }
 
