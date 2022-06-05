@@ -115,20 +115,79 @@ export default {
 }
 
 .form-control input[type="radio"] {
-   width: 30px;
+   -webkit-appearance: none;
+   appearance: none;
+   background-color: #fff;
+   margin: 0;
+   font: inherit;
+   color: #0000002b;
+   width: 1.15em;
+   height: 1.15em;
+   border: 1px solid #0000002b;
+   border-radius: 50%;
+   transform: translateY(-0.075em);
+   display: grid;
+   place-content: center;
+   margin-right: .5rem;
 }
+
+.form-control input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--basecolor);
+}
+
+.form-control input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid #0000002b;
+  outline-offset: max(2px, 0.15em);
+}
+
 
 .form-wrapper {
    max-width: 700px;
    display: flex;
    align-items: center;
    margin: 0px auto;
-   padding-bottom: 3rem;
+   padding: 0px .5rem 3rem .5rem;
 }
 
-form{
+form {
    max-width: 400px;
-   margin-top: 4rem;
+   margin-top: 20%;
+}
+
+@media (max-width: 900px){
+   form{
+      margin-top: 25%;
+   }
+}
+
+@media (max-width: 800px){
+   form{
+      margin-top: 30%;
+   }
+}
+
+
+@media (max-width: 700px){
+   form{
+      margin-top: 35%;
+   }
+}
+
+
+@media (max-width: 650px) {
+   form {
+      margin: 0px auto;
+   }
 }
 
 form h1 {
@@ -161,7 +220,7 @@ form h1 {
    font-size: 30px;
 }
 
-.form-postal>.form-postal-content>span{
+.form-postal>.form-postal-content>span {
    color : var(--basecolor);
    font-size: 30px;
    text-align: left;
@@ -210,7 +269,7 @@ form h1 {
    text-decoration: none;
 }
 
-.form-control input , select{
+.form-control input , select {
    border: 1px solid #0000004b;
    border-radius: 4px;
    outline: none;

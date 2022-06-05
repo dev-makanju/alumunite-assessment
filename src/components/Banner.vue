@@ -25,8 +25,12 @@
                         <font-awesome-icon class="check-icon"  icon="check"></font-awesome-icon>
                      </span>
                   </div>
-                  <h2>personal data</h2>
+                  <h2 @click="toggleNavbar" :class="[ personalData ? 'nav-active' : '' ]">personal data</h2>
                </li>
+               <!---ADDED A NEW FORM FOR MOBILE SCREENS-->
+               <div v-if="isMobile" :class="['mobile-active', personalData ? 'open' : '' ]">
+                  <FormWrapper/>
+               </div>
                <li class="p-data">
                   <div class="progress-wrapper">
                      <div>2</div>
@@ -48,16 +52,37 @@
 
 <script>
 
+import FormWrapper from '@/components/FormWrapper.vue'
+
 export default{
    name:'BannerWrapper',
+   components:{
+     FormWrapper
+   },
    data(){
       return{
          dataFilled: false,
+         isMobile: null,
+         personalData: true,
       }
+   },
+   created(){
+      addEventListener('resize' , this.checkScreenSize)
+      this.checkScreenSize()
    },
    methods:{
       closeAlert(){
          this.$emit('close-error')
+      },
+      toggleNavbar(){
+         this.personalData = !this.personalData
+      },
+      checkScreenSize(){
+         const screenWidth = window.innerWidth
+         if(screenWidth <=  650){
+            this.isMobile = true; 
+            return;
+         }this.isMobile = false;
       }
    }
 }
@@ -65,6 +90,10 @@ export default{
 </script>
 
 <style lang="css" scoped>
+   .nav-active {
+     color: rgb(170, 161, 161) !important;
+   }
+
    .link {
       text-decoration: none;
       font-weight: 600;
@@ -182,11 +211,55 @@ export default{
       width: 80%;
       margin: 0px auto;
       margin-top: 5rem;
+   }  
+
+   @media (max-width: 650px) {
+      .banner-image-wrapper {
+         display: none;
+      }
    }
 
    .banner-image-wrapper img{
       width: 150px;
       border-bottom: 1px solid rgb(214, 211, 211);
+   }
+
+   .mobile-active{
+      overflow: hidden;
+      display: none;
+      transition: max-height .2s ease-out ;
+   }
+
+   .mobile-active.open{
+      display: block;
+      transition: 100% .2s ease-out ;
+   }
+   /********
+   ***RESPONSIVE DESIGN FOR BANNER SECTION 
+   ******/
+
+   @media(max-width: 650px) {
+      .template-logo, 
+      .template-nav,
+      .banner-progress-wrapper ,
+      .progress-content {
+         width: 94%;
+         transition: all .5s ease;
+      }
+
+      .progress-content li{
+         transform: translateX(-3%);
+      }
+
+      .banner .text{
+         width: 95%;
+         padding-bottom: 3rem;
+      }
+
+      .banner .text > p{
+         font-size: 14px;
+         color: #00000090;
+      }
    }
 
 </style>

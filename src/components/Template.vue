@@ -28,6 +28,25 @@ export default {
       height: 100vh;
       display: grid;
       grid-template-columns: 350px 1fr;
+      transition: .5s ease;
+      max-width: 1440px;
+      margin: 0px auto;
+   }
+
+   @media (max-width: 1100px) {
+      .template-wrapper {
+         grid-template-columns: 300px 1fr;
+      }
+   }
+
+   @media (max-width: 650px) {
+      .template.form{
+         display: none ;
+      }
+
+      .template-wrapper {
+         grid-template-columns: 1fr;
+      }
    }
 
    .template.form {

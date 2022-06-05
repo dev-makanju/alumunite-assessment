@@ -86,6 +86,7 @@ export default {
       box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, .1);
       position: absolute;
       width: 100%;
+      z-index: 111;
    }
 
    .select-items-wrapper li{
