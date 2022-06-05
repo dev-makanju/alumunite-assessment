@@ -242,10 +242,13 @@ export default{
    @media(max-width: 650px) {
       .template-logo, 
       .template-nav,
-      .banner-progress-wrapper ,
-      .progress-content {
-         width: 95%;
+      .banner-progress-wrapper {
+         width: 94%;
          transition: all .5s ease;
+      }
+
+      .progress-content {
+         width: 98%;
       }
 
       .progress-content li{
@@ -255,6 +258,10 @@ export default{
       .banner .text{
          width: 95%;
          padding-bottom: 3rem;
+      }
+
+      .progress-wrapper{
+         width: 100%;
       }
 
       .banner .text > p{

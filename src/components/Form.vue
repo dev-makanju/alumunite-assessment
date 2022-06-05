@@ -150,7 +150,6 @@ input[type="radio"]:focus {
   outline-offset: max(2px, 0.15em);
 }
 
-
 .form-wrapper {
    max-width: 700px;
    display: flex;
