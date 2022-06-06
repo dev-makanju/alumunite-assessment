@@ -134,7 +134,7 @@ export default{
    .template-nav{
       width: 80%;
       margin: 0px auto;
-      padding: .5rem 0px;
+      padding: 1rem 0px;
       display: flex;
       justify-content: flex-start;
    }
