@@ -18,7 +18,7 @@
             </div>
             <div class="form-control">
                <label>Year Graduated</label>
-               <input type="date" id="">
+               <input type="date" id="" value="2022-05-02">
             </div>           
             <hr>  
             <div class="form-control select">
@@ -33,7 +33,7 @@
             </div>
             <div class="form-control">
                <label>Year Graduated</label>
-               <input type="date" id="">
+               <input type="date" id="" value="2022-05-02">
             </div>
             <hr>
             <div class="form-postal">
@@ -150,6 +150,11 @@ input[type="radio"]:focus {
   outline-offset: max(2px, 0.15em);
 }
 
+input[type="date"] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+}
+
 .form-wrapper {
    max-width: 700px;
    display: flex;
@@ -192,6 +197,12 @@ form {
 form h1 {
    color: #000000;
    text-align: left;
+}
+
+@media (max-width: 400px) {
+   form h1{
+      font-size: 26px;
+   }
 }
 
 .form-postal {
